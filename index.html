@@ -1,73 +1,165 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Jimmy's Personal Site</title>
-  </head>
+<html lang="en">
 
-  <body>
-    <table cellspacing="20">
-      <tr>
-        <td>
-          <img src="circle-cropped.png" alt="james kinyua picture" />
-        </td>
-        <td>
-          <h1>James Kinyua</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAMES KINYUA PORTFOLIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="content-wrap">
+        <h1>James Kinyua Njuguna</h1>
+        <h2>Software Engineer</h2>
+
+        <p>
+          I have a deep passion for software engineering and I’m always amazed by the things accomplished by teams that
+          are part
+          of this craft. From feats such as building a simple mobile or web application, to building software systems
+          used to
+          power an entire spacecraft. I'm always up for joining such amazing teams.
+          I am an experienced Software Engineer with a demonstrated history of working in computer science, information
+          technology, and the services industry. Skilled in JavaScript, React, Node.js, SASS, and Github. Strong
+          engineering
+          professional with a Bachelor’s Degree focused in Information Technology from Mount Kenya University.
+        </p>
+      </div>
+    </header>
+
+    <section class="projects">
+      <div class="content-wrap divider">
+        <h2>Featured Projects</h2>
+        <p>
+          View selected projects below. More information can be found at my
+          <a href="https://github.com/JayKay24">Github</a>.
+        </p>
+
+        <section class="project-item">
+          <img src="images/crown-clothing.png" alt="a shopping application built with React" />
+          <h3>Crown Clothing</h3>
           <p>
-            <em
-              >Software Engineer at
-              <strong
-                ><a href="https://thriveglobal.com/">Thrive Global</a></strong
-              ></em
-            >
+            Online retail store that deals with buying and selling of clothes.
           </p>
-          <p>I am Web Developer. I ❤ coffee and playing video games.</p>
-        </td>
-      </tr>
-    </table>
+          <a class="btn" href="https://github.com/JayKay24/crown-clothing">View project</a>
+        </section>
 
-    <hr />
-    <h3>Courses Completed</h3>
-    <ul>
-      <li>Learning Everyday Math</li>
-      <li>Software Architecture Fundamentals</li>
-    </ul>
-    <hr>
-    <h3>Work Experience</h3>
-    <table cellspacing="10">
-      <thead>
-        <tr>
-          <th>Dates</th>
-          <th>Work</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-      <tfoot></tfoot>
-      <tr>
-        <td>2018-2019</td>
-        <td>Software Engineer at Boundless Mind</td>
-      </tr>
-      <tr>
-        <td>2019</td>
-        <td>Software Engineer at Thrive Global</td>
-      </tr>
-    </table>
+        <section class="project-item">
+          <img src="images/ticketing.png" alt="an e-commerce application built leveraging microservices" />
+          <h3>Event Ticketing</h3>
+          <p>
+            E-commerce application that facilitates the buying and selling of tickets for events.
+          </p>
+          <a class="btn" href="https://github.com/JayKay24/Event-Ticketing">View project</a>
+        </section>
+      </div>
+    </section>
 
-    <hr />
-    <h3>Skills</h3>
-    <table cellspacing="10">
-      <tr>
-        <td>Javascript</td>
-        <td>⭐⭐⭐⭐⭐</td>
-      </tr>
-      <tr>
-        <td>HTML</td>
-        <td>⭐⭐⭐⭐⭐</td>
-      </tr>
-    </table>
+    <section class="work-experience">
+      <div class="content-wrap item-details divider">
+        <h2>Work Experience</h2>
+        <p>
+          Optional paragraph for work experience summary. Not a part of the
+          job details. Delete if not being used.
+        </p>
 
-    <hr />
-    <a href="hobbies.html">My Hobbies</a>
-    <a href="contact-me.html">Contact Me</a>
-  </body>
+        <section class="job-item">
+          <div class="job-details">
+            <h3>Software Engineer</h3>
+            <p>Andela</p>
+            <p>July 2017 - Sept 2020</p>
+          </div>
+          <div class="job-summary">
+            <p>Summary</p>
+            <ul>
+              <li>Built an improved version of a modal that better captured the details of a mentorship request and made
+                it possible for
+                mentees to become mentors. The modal had additional checkboxes and input fields.</li>
+              <li>Performed a progressive phasing out of Bootstrap CSS in favor of SCSS to make the app lean and provide
+                a greater degree
+                of development control.</li>
+              <li>Cleaned up SQL queries by removing unnecessary joins from older REST API endpoint implementations and
+                thus making
+                subsequent database(PostgreSQL) reads faster.</li>
+            </ul>
+          </div>
+        </section>
+        <section class="job-item">
+          <div class="job-details">
+            <h3>Software Engineer</h3>
+            <p>Thrive Global</p>
+            <p>Oct 2019 - May 2020</p>
+          </div>
+          <div class="job-summary">
+            <p>Summary</p>
+            <ul>
+              <li>Built a responsive modal for a React.js internal admin dashboard, used to capture and send form data
+                to a REST API
+                which communicated with various microservices as part of a larger architecture.</li>
+              <li>The initial implementation of the form used multiple `useState` hooks to capture data, I migrated this
+                state
+                management to a single `useReducer` hook to remove clutter in the code brought about by this.</li>
+              <li>Increased coverage of end-to-end tests for the admin dashboard leveraging the Cypress library and
+                integration tests
+                leveraging React-Testing Library.</li>
+            </ul>
+          </div>
+        </section>
+        <section class="job-item">
+          <div class="job-details">
+            <h3>Software Engineer</h3>
+            <p>Boundless Mind</p>
+            <p>Nov 2018 - Oct 2019</p>
+          </div>
+          <div class="job-summary">
+            <p>Summary</p>
+            <ul>
+              <li>Implemented design templates for a customer dashboard generated using Invision which included
+                multi-step forms with
+                modals and charts used to capture client configuration data for the iOS, Android and Typescript SDKs.
+              </li>
+              <li>Used SCSS and Pug template engine for the styling and markup and HighCharts library for implementing
+                the chart views.</li>
+              <li>Built a Typescript SDK that mirrored our iOS and Android SDKs to achieve reachability on Web app
+                clients. Also leveraged
+                the TypeDocs library to render HTML documentation for the SDK which I eventually uploaded to an Amazon
+                S3 bucket for
+                easy access.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="education">
+      <div class="content-wrap item-details">
+        <h2>Education</h2>
+
+        <section>
+          <h3>Mount Kenya University - Thika</h3>
+          <p>Bachelor of Science in Information Technology, 2012 - 2016</p>
+          <p>
+            Mount Kenya University Research and Innovation Students
+            Association
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <div class="content-wrap">
+        <h2>Let's Keep in Touch!</h2>
+
+        <ul class="contact-list">
+          <li><a href="https://www.linkedin.com/in/james-kinyua-njuguna/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+</body>
+
 </html>
