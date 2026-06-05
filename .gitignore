@@ -1,0 +1,3 @@
+# Ignore resume PDF to prevent accidental uploads/commits
+2026 James Kinyua Resume.pdf
+*.pdf

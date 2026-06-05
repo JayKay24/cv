@@ -4,162 +4,783 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JAMES KINYUA PORTFOLIO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@600&display=swap"
-    rel="stylesheet" />
+  <title>James Kinyua | Senior Software & AI Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of James Kinyua, an experienced Software Engineer specializing in distributed backends, cloud-native microservices, and AI-enhanced applications." />
+  
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            accent: ['Caveat', 'cursive'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
-  <main>
-    <header>
-      <div class="content-wrap">
-        <h1>James Kinyua Njuguna</h1>
-        <h2>Software Engineer</h2>
+<body class="bg-[#060814] text-slate-100 antialiased font-sans selection:bg-indigo-500/30 selection:text-white">
+  
+  <!-- Background Glowing Blobs -->
+  <div class="relative w-full min-h-screen overflow-hidden">
+    <div class="glow-spot bg-indigo-600/20 top-[-10%] left-[-10%]"></div>
+    <div class="glow-spot bg-purple-600/15 top-[35%] right-[-10%]"></div>
+    <div class="glow-spot bg-cyan-600/10 bottom-[-5%] left-[20%]"></div>
 
-        <p>
-          I have a deep passion for software engineering and I’m always amazed by the things accomplished by teams that
-          are part
-          of this craft. From feats such as building a simple mobile or web application, to building software systems
-          used to
-          power an entire spacecraft. I'm always up for joining such amazing teams.
-          I am an experienced Software Engineer with a demonstrated history of working in computer science, information
-          technology, and the services industry. Skilled in JavaScript, React, Node.js, SASS, and Github. Strong
-          engineering
-          professional with a Bachelor’s Degree focused in Information Technology from Mount Kenya University.
-        </p>
-      </div>
+    <!-- Floating Navigation Bar -->
+    <header class="fixed top-4 left-0 w-full z-50 px-4">
+      <nav id="main-nav" class="max-w-4xl mx-auto glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+        <a href="#hero" class="font-heading font-extrabold text-xl tracking-tight text-white hover:text-indigo-400 transition-colors">
+          JK<span class="text-indigo-500">.</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#about" id="nav-about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+          <a href="#projects" id="nav-projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
+          <a href="#experience" id="nav-experience" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a>
+          <a href="#skills" id="nav-skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a>
+          <a href="#education" id="nav-education" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Education</a>
+        </div>
+        <a href="#contact" id="nav-cta" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          Contact Me
+        </a>
+      </nav>
     </header>
 
-    <section class="projects">
-      <div class="content-wrap divider">
-        <h2>Featured Projects</h2>
-        <p>
-          View selected projects below. More information can be found at my
-          <a href="https://github.com/JayKay24">Github</a>.
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-5xl mx-auto px-4 pt-32 pb-24">
+      
+      <!-- Hero Section -->
+      <section id="hero" class="flex flex-col items-center text-center pt-6 pb-16 md:pt-12 md:pb-24 scroll-mt-28">
+        <!-- Profile Picture Container -->
+        <div class="relative w-32 h-32 md:w-36 md:h-36 mb-6">
+          <!-- Glowing background halo -->
+          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 blur-md opacity-60 animate-pulse"></div>
+          <!-- Profile image, cropped to circle on browser side -->
+          <img src="images/profile.jpeg" alt="James Kinyua Profile Picture" class="relative w-full h-full rounded-full object-cover border-2 border-[#060814] shadow-2xl z-10" />
+        </div>
+        <span class="text-xs md:text-sm font-semibold tracking-wider text-indigo-400 uppercase mb-4 px-3 py-1 bg-indigo-500/10 rounded-full border border-indigo-500/20">
+          Available for Opportunities
+        </span>
+        <h1 class="font-heading text-5xl md:text-8xl font-black text-white leading-tight tracking-tight mb-6">
+          James Kinyua
+        </h1>
+        <p class="font-heading text-xl md:text-3xl font-medium text-slate-400 mb-8 max-w-2xl">
+          Crafting High-Performance <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Distributed Systems</span> & <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Conversational AI</span>
         </p>
-
-        <section class="project-item">
-          <img src="images/crown-clothing.png" alt="a shopping application built with React" />
-          <h3>Crown Clothing</h3>
-          <p>
-            Online retail store that deals with buying and selling of clothes.
-          </p>
-          <a class="btn" href="https://github.com/JayKay24/crown-clothing">View project</a>
-        </section>
-
-        <section class="project-item">
-          <img src="images/ticketing.png" alt="an e-commerce application built leveraging microservices" />
-          <h3>Event Ticketing</h3>
-          <p>
-            E-commerce application that facilitates the buying and selling of tickets for events.
-          </p>
-          <a class="btn" href="https://github.com/JayKay24/Event-Ticketing">View project</a>
-        </section>
-      </div>
-    </section>
-
-    <section class="work-experience">
-      <div class="content-wrap item-details divider">
-        <h2>Work Experience</h2>
-        <p>
-          Optional paragraph for work experience summary. Not a part of the
-          job details. Delete if not being used.
+        <p class="text-base md:text-lg text-slate-300 max-w-3xl leading-relaxed mb-10">
+          I am an experienced Software Engineer specializing in building scalable distributed backends, cloud-native microservices, and modern AI-enhanced applications. From architecting high-availability identity layers to engineering RAG systems powered by LLMs, I love building technology that solves real-world complexity.
         </p>
+        
+        <!-- Social & Action Links -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+          <a href="#projects" id="hero-projects-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(99,102,241,0.5)] transform hover:-translate-y-0.5">
+            Explore My Work
+          </a>
+          <a href="https://docs.google.com/document/d/1qoaBA3z6PfKqcZzeLDlffY4TuiLknsbd3ELfpP7EBvk/edit?usp=sharing" id="hero-resume-btn" target="_blank" class="glass hover:bg-white/10 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 border border-white/10 flex items-center gap-2 transform hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-indigo-400"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            View Resume
+          </a>
+        </div>
 
-        <section class="job-item">
-          <div class="job-details">
-            <h3>Software Engineer</h3>
-            <p>Andela</p>
-            <p>July 2017 - Sept 2020</p>
-          </div>
-          <div class="job-summary">
-            <p>Summary</p>
-            <ul>
-              <li>Built an improved version of a modal that better captured the details of a mentorship request and made
-                it possible for
-                mentees to become mentors. The modal had additional checkboxes and input fields.</li>
-              <li>Performed a progressive phasing out of Bootstrap CSS in favor of SCSS to make the app lean and provide
-                a greater degree
-                of development control.</li>
-              <li>Cleaned up SQL queries by removing unnecessary joins from older REST API endpoint implementations and
-                thus making
-                subsequent database(PostgreSQL) reads faster.</li>
-            </ul>
-          </div>
-        </section>
-        <section class="job-item">
-          <div class="job-details">
-            <h3>Software Engineer</h3>
-            <p>Thrive Global</p>
-            <p>Oct 2019 - May 2020</p>
-          </div>
-          <div class="job-summary">
-            <p>Summary</p>
-            <ul>
-              <li>Built a responsive modal for a React.js internal admin dashboard, used to capture and send form data
-                to a REST API
-                which communicated with various microservices as part of a larger architecture.</li>
-              <li>The initial implementation of the form used multiple `useState` hooks to capture data, I migrated this
-                state
-                management to a single `useReducer` hook to remove clutter in the code brought about by this.</li>
-              <li>Increased coverage of end-to-end tests for the admin dashboard leveraging the Cypress library and
-                integration tests
-                leveraging React-Testing Library.</li>
-            </ul>
-          </div>
-        </section>
-        <section class="job-item">
-          <div class="job-details">
-            <h3>Software Engineer</h3>
-            <p>Boundless Mind</p>
-            <p>Nov 2018 - Oct 2019</p>
-          </div>
-          <div class="job-summary">
-            <p>Summary</p>
-            <ul>
-              <li>Implemented design templates for a customer dashboard generated using Invision which included
-                multi-step forms with
-                modals and charts used to capture client configuration data for the iOS, Android and Typescript SDKs.
-              </li>
-              <li>Used SCSS and Pug template engine for the styling and markup and HighCharts library for implementing
-                the chart views.</li>
-              <li>Built a Typescript SDK that mirrored our iOS and Android SDKs to achieve reachability on Web app
-                clients. Also leveraged
-                the TypeDocs library to render HTML documentation for the SDK which I eventually uploaded to an Amazon
-                S3 bucket for
-                easy access.</li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </section>
+        <!-- Social Icons in Hero -->
+        <div class="flex items-center gap-6 text-slate-400">
+          <a href="https://github.com/JayKay24" id="hero-github" target="_blank" class="hover:text-white transition-colors" aria-label="GitHub Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/james-kinyua-njuguna/" id="hero-linkedin" target="_blank" class="hover:text-white transition-colors" aria-label="LinkedIn Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </section>
 
-    <section class="education">
-      <div class="content-wrap item-details">
-        <h2>Education</h2>
+      <!-- About Section -->
+      <section id="about" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          <div class="md:col-span-1">
+            <h2 class="font-heading text-3xl font-bold text-white mb-4 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-400"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              About Me
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full"></div>
+          </div>
+          <div class="md:col-span-2 text-slate-300 leading-relaxed space-y-6">
+            <p>
+              I have a deep passion for software engineering and I’m always amazed by the things accomplished by teams that are part of this craft. From feats such as building a simple mobile or web application, to building software systems used to power an entire spacecraft. I'm always up for joining such amazing teams.
+            </p>
+            <p>
+              Over the last decade, I have focused on mastering clean architecture, microservices, and AI integrations. Whether it's refactoring legacy codebases to improve rendering speeds, implementing asynchronous messaging architectures (RabbitMQ/NATS), or designing Retrieval-Augmented Generation (RAG) models, I prioritize code maintainability, testing, and operational performance.
+            </p>
+            <p class="font-accent text-3xl text-indigo-400 font-normal mt-4">
+              James Kinyua
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section>
-          <h3>Mount Kenya University - Thika</h3>
-          <p>Bachelor of Science in Information Technology, 2012 - 2016</p>
-          <p>
-            Mount Kenya University Research and Innovation Students
-            Association
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <h2 class="font-heading text-3xl font-bold text-white mb-3 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-400"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              Projects Portfolio
+            </h2>
+            <p class="text-slate-400 max-w-lg">
+              Explore key projects spanning LLM integrations, scalable distributed backends, and responsive frontend applications.
+            </p>
+          </div>
+          
+          <!-- Category Filters -->
+          <div id="project-filters" class="flex flex-wrap gap-2 p-1 bg-white/5 rounded-xl border border-white/5 w-fit">
+            <button id="btn-filter-all" data-filter="all" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition-all duration-300">
+              All Work
+            </button>
+            <button id="btn-filter-ai" data-filter="ai" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white bg-transparent transition-all duration-300">
+              AI & RAG
+            </button>
+            <button id="btn-filter-backend" data-filter="backend" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white bg-transparent transition-all duration-300">
+              Full Stack/Cloud
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+          
+          <!-- Project: Astra Document Summary -->
+          <article data-category="ai" class="project-card bg-[#0e1222]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500 flex flex-col group h-full">
+            <div class="w-full h-48 bg-gradient-to-br from-indigo-900/60 to-purple-900/40 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+              <div class="absolute w-24 h-24 rounded-full bg-indigo-500/20 blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-indigo-400 relative z-10"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              <span class="absolute top-3 right-3 text-[10px] font-bold tracking-wider uppercase bg-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-500/30 backdrop-blur-md">
+                AI & RAG
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                  Astra Document Summary
+                </h3>
+                <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                  Next.js-based conversational AI web assistant designed for document parsing and summarization. Supports PDF, DOCX, or raw text uploads, providing cohesive summaries powered by Google Gemini.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Next.js 15</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Vertex AI</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Vercel AI SDK</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Clerk</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Upstash Redis</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <a href="https://project-kl3jb.vercel.app/" target="_blank" class="flex-grow text-center text-xs font-semibold py-2.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-indigo-600/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/JayKay24/ai_enhanced_web_apps/tree/main/apps/astra-document-summary" target="_blank" class="px-3 py-2.5 rounded-lg border border-white/10 hover:bg-white/5 text-slate-300 hover:text-white transition-colors" aria-label="View Source Code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project: Astra Aviation RAG -->
+          <article data-category="ai" class="project-card bg-[#0e1222]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500 flex flex-col group h-full">
+            <div class="w-full h-48 bg-gradient-to-br from-cyan-900/60 to-indigo-900/40 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+              <div class="absolute w-24 h-24 rounded-full bg-cyan-500/20 blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-cyan-400 relative z-10"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.9-.2-1.8.3-2.1 1.2-.3.9.1 1.9.9 2.4l5.9 4.3-1.6 1.6-4.3-.5c-.6-.1-1.1.1-1.4.5-.4.4-.5 1-.4 1.5l.7 2.7c.1.5.5.9 1 .9h.2l2.7-.7c.5.1 1.1 0 1.5-.4.4-.3.6-.8.5-1.4l-.5-4.3 1.6-1.6 4.3 5.9c.5.8 1.5 1.2 2.4.9.9-.3 1.4-1.2 1.2-2.1Z"/></svg>
+              <span class="absolute top-3 right-3 text-[10px] font-bold tracking-wider uppercase bg-cyan-500/20 text-cyan-300 px-2.5 py-1 rounded-full border border-cyan-500/30 backdrop-blur-md">
+                AI & RAG
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  Astra Aviation RAG
+                </h3>
+                <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                  Conversational AI safety assistant designed to contextually search and analyze NTSB aviation accident/incident reports using Retrieval-Augmented Generation and local Hierarchical Navigable Small World (HNSW) vector indexing.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Next.js</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">RAG</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">HNSWLib</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">NestJS</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Vertex AI</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <a href="https://project-zffq7.vercel.app/" target="_blank" class="flex-grow text-center text-xs font-semibold py-2.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-indigo-600/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/JayKay24/ai_enhanced_web_apps/tree/main/apps/astra-aviation-rag" target="_blank" class="px-3 py-2.5 rounded-lg border border-white/10 hover:bg-white/5 text-slate-300 hover:text-white transition-colors" aria-label="View Source Code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project: Astra Interview Assistant -->
+          <article data-category="ai" class="project-card bg-[#0e1222]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500 flex flex-col group h-full">
+            <div class="w-full h-48 bg-gradient-to-br from-fuchsia-900/60 to-purple-900/40 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+              <div class="absolute w-24 h-24 rounded-full bg-fuchsia-500/20 blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-fuchsia-400 relative z-10"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span class="absolute top-3 right-3 text-[10px] font-bold tracking-wider uppercase bg-fuchsia-500/20 text-fuchsia-300 px-2.5 py-1 rounded-full border border-fuchsia-500/30 backdrop-blur-md">
+                AI & RAG
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading text-lg font-bold text-white mb-2 group-hover:text-fuchsia-400 transition-colors">
+                  Astra Interview Assistant
+                </h3>
+                <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                  Conversational AI application simulating real-world job interviews, asking tailored technical questions based on resumes and job descriptions, and delivering structured evaluations.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Next.js</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Vertex AI</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Vercel AI SDK</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">TypeScript</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <a href="https://project-n9t17.vercel.app/" target="_blank" class="flex-grow text-center text-xs font-semibold py-2.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-indigo-600/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/JayKay24/ai_enhanced_web_apps/tree/main/apps/astra-interview-assistant" target="_blank" class="px-3 py-2.5 rounded-lg border border-white/10 hover:bg-white/5 text-slate-300 hover:text-white transition-colors" aria-label="View Source Code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project: ShiftSync -->
+          <article data-category="backend" class="project-card bg-[#0e1222]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500 flex flex-col group h-full">
+            <div class="w-full h-48 bg-gradient-to-br from-emerald-900/60 to-indigo-900/40 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+              <div class="absolute w-24 h-24 rounded-full bg-emerald-500/20 blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-emerald-400 relative z-10"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+              <span class="absolute top-3 right-3 text-[10px] font-bold tracking-wider uppercase bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-full border border-emerald-500/30 backdrop-blur-md">
+                Distributed/Cloud
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                  ShiftSync
+                </h3>
+                <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                  A full-stack, web-based shift scheduling platform designed for multi-location, multi-timezone restaurants. Resolves timezone translation issues and optimizes shift coverage.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Node.js</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">React</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">MongoDB</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Docker</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Timezones</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <a href="https://github.com/JayKay24/ShiftSync" target="_blank" class="flex-grow text-center text-xs font-semibold py-2.5 rounded-lg border border-white/10 text-slate-200 hover:bg-white/5 transition-colors flex items-center justify-center gap-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project: FlixTube -->
+          <article data-category="backend" class="project-card bg-[#0e1222]/60 border border-white/5 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500 flex flex-col group h-full">
+            <div class="w-full h-48 bg-gradient-to-br from-rose-900/60 to-purple-900/40 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+              <div class="absolute w-24 h-24 rounded-full bg-rose-500/20 blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-rose-400 relative z-10"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2"/></svg>
+              <span class="absolute top-3 right-3 text-[10px] font-bold tracking-wider uppercase bg-rose-500/20 text-rose-300 px-2.5 py-1 rounded-full border border-rose-500/30 backdrop-blur-md">
+                Distributed/Cloud
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading text-lg font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">
+                  FlixTube
+                </h3>
+                <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                  Cloud-native video streaming microservices platform. Features decoupled components for video processing and notifications utilizing event-driven pipelines on Kubernetes.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Docker</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Kubernetes</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Microservices</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">RabbitMQ</span>
+                  <span class="text-[10px] font-semibold bg-white/5 text-slate-300 px-2 py-0.5 rounded">Node.js</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <a href="https://github.com/JayKay24/flix-tube" target="_blank" class="flex-grow text-center text-xs font-semibold py-2.5 rounded-lg border border-white/10 text-slate-200 hover:bg-white/5 transition-colors flex items-center justify-center gap-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+          
+        </div>
+      </section>
+
+      <!-- Work Experience Section -->
+      <section id="experience" class="glass p-6 md:p-12 rounded-2xl scroll-mt-28 scroll-reveal border border-white/5 my-16">
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold text-white mb-3 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-400"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Work History
+          </h2>
+          <p class="text-slate-400 max-w-lg">
+            Chronological record of my professional software engineering engagements, demonstrating project deliveries.
           </p>
-        </section>
-      </div>
-    </section>
+        </div>        <!-- Experience Card Stack -->
+        <div class="space-y-6">
+          
+          <!-- Experience: Purple Elephant Ventures -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Software Engineer <span class="text-xs font-normal text-indigo-400 px-2 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20 ml-2">Contract</span>
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    Purple Elephant Ventures <span class="text-slate-500">•</span> Nairobi, Kenya
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  Feb 2025 - Aug 2025
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Architected a highly available identity governance layer handling a 300% surge in traffic while ensuring secure multi-tenant isolation.</li>
+                <li>Accelerated time-to-market by 100% by re-architecting the data model using the EAV pattern, significantly enhancing system scalability and enabling faster feature delivery.</li>
+                <li>Bootstrapped a secure, high-integrity payment processing pipeline for a commission-based tipping platform, managing distributed transaction state over TLS/SSL.</li>
+              </ul>
+            </div>
+          </article>
 
-    <footer>
-      <div class="content-wrap">
-        <h2>Let's Keep in Touch!</h2>
+          <!-- Experience: Layer 5 -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Open Source Contributor & Software Engineer
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    Layer 5 <span class="text-slate-500">•</span> Remote, USA
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  Sep 2023 - Present
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Standardized the documentation site by refactoring 19 blocks of redundant HTML across 2 pages, minimizing technical debt and enabling scalable content updates for Meshery's open-source project.</li>
+                <li>Improved user experience and reduced operational costs by cutting the Meshery documentation website's page load time by 17% through systematic image and video compression.</li>
+              </ul>
+            </div>
+          </article>
 
-        <ul class="contact-list">
-          <li><a href="https://www.linkedin.com/in/james-kinyua-njuguna/" target="_blank">LinkedIn</a></li>
-        </ul>
-      </div>
-    </footer>
-  </main>
+          <!-- Experience: MUST Company -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Backend Engineer <span class="text-xs font-normal text-indigo-400 px-2 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20 ml-2">Contract</span>
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    MUST Company <span class="text-slate-500">•</span> Seoul, South Korea
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  May 2024 - Oct 2024
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Reduced manual review costs by 40% and improved data integrity by integrating CAPTCHA, which blocked 90% of bot-generated spam rental listings.</li>
+                <li>Doubled market access and improved regulatory compliance by leading internationalization and web accessibility efforts for a core office rental application serving the South Korean and Japanese markets.</li>
+                <li>Increased efficiency by 75% and handled 100+ daily downloads by developing a reliable, scheduled automation process for the retrieval of PDF blueprints from a third-party vendor.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Experience: Propine Technologies -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Backend Engineer <span class="text-xs font-normal text-indigo-400 px-2 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20 ml-2">Contract</span>
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    Propine Technologies <span class="text-slate-500">•</span> Singapore
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  Sep 2022 - Dec 2022
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Engineered an asynchronous event-driven microservices architecture to decouple notification processing from the critical path, improving system resilience and throughput.</li>
+                <li>Drove a critical engineering excellence initiative by leading consensus for a standardized UI component library across a 12-person team, resulting in improved feature velocity and a significant reduction in technical debt.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Experience: Andela -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Software Engineer <span class="text-xs font-normal text-indigo-400 px-2 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20 ml-2">Full-Time</span>
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    Andela <span class="text-slate-500">•</span> Nairobi, Kenya
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  Jul 2017 - Sep 2020
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Architected and deployed a resilient sales-tracking distributed backend system, generating $4200 USD on launch day and scaling to serve 900 users while handling 100 concurrent requests.</li>
+                <li>Drove operational excellence by integrating Azure Application Insights, establishing a high-visibility monitoring framework that optimized API performance and slashed Mean Time to Resolution (MTTR) through real-time, data-driven troubleshooting.</li>
+                <li>Drove a significant improvement in core user experience and conversion metrics by accelerating front-end performance, reducing Largest Contentful Paint (LCP) by 37.5%—a critical optimization that directly improved customer engagement and site abandonment rates.</li>
+                <li>Led a team of 3 to standardize engineering excellence through the development of a modular TypeScript SDK, reducing technical debt and improving pipeline reliability.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Experience: Thrive Global -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Software Engineer <span class="text-xs font-normal text-indigo-400 px-2 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20 ml-2">Contract</span>
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    Thrive Global <span class="text-slate-500">•</span> Remote, USA
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  Oct 2019 - May 2020
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Drove internal team efficiency by reducing technical debt, consolidating fragmented form logic into a unified useReducer architecture that cut boilerplate code by 34% and accelerated the debugging cycle for critical internal tools.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Experience: Boundless Mind -->
+          <article class="group">
+            <div class="glass p-6 md:p-8 rounded-2xl hover:border-indigo-500/30 transition-all duration-300 shadow-xl">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="font-heading text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    Software Engineer <span class="text-xs font-normal text-indigo-400 px-2 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20 ml-2">Contract</span>
+                  </h3>
+                  <p class="text-sm font-medium text-slate-300 flex items-center gap-2 mt-1">
+                    Boundless Mind (acquired by Thrive Global) <span class="text-slate-500">•</span> Remote, USA
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm font-semibold text-slate-400 md:text-right bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 w-fit">
+                  Nov 2018 - Sep 2019
+                </div>
+              </div>
+              <ul class="space-y-3 text-slate-300 text-sm list-disc pl-4 marker:text-indigo-400">
+                <li>Accelerated developer onboarding by authoring a robust setup suite for a TypeScript SDK, featuring modular examples for deploying neuroscience-based reinforcement models.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold text-white mb-3 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-400"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            Technical Expertise
+          </h2>
+          <p class="text-slate-400 max-w-lg">
+            Core technology stacks, tooling, and architectural concepts acquired over years of development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Category: AI Workflows -->
+          <article class="glass p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2 rounded-xl bg-indigo-500/10 text-indigo-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </span>
+              <h3 class="font-heading text-base font-bold text-white">AI Workflows</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">LangChain</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Retrieval-Augmented Gen (RAG)</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Vercel AI SDK</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Google Vertex AI</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Gemini LLM</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">HNSWLib</span>
+            </div>
+          </article>
+
+          <!-- Category: Languages -->
+          <article class="glass p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2 rounded-xl bg-cyan-500/10 text-cyan-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10 13-2 2 2 2"/><path d="m14 17 2-2-2-2"/></svg>
+              </span>
+              <h3 class="font-heading text-base font-bold text-white">Languages</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">TypeScript</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">JavaScript</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Python</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">SQL</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Bash</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">HTML5 / CSS3</span>
+            </div>
+          </article>
+
+          <!-- Category: Frontend Frameworks -->
+          <article class="glass p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2 rounded-xl bg-purple-500/10 text-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </span>
+              <h3 class="font-heading text-base font-bold text-white">Frontend</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Next.js 15+</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">React</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">React Native</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Tailwind CSS</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Redux</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Sass</span>
+            </div>
+          </article>
+
+          <!-- Category: Backend & API -->
+          <article class="glass p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2 rounded-xl bg-emerald-500/10 text-emerald-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="8" x="2" y="3" rx="2"/><rect width="20" height="8" x="2" y="13" rx="2"/><line x1="6" x2="6.01" y1="7" y2="7"/><line x1="6" x2="6.01" y1="17" y2="17"/><line x1="10" x2="10.01" y1="7" y2="7"/><line x1="10" x2="10.01" y1="17" y2="17"/></svg>
+              </span>
+              <h3 class="font-heading text-base font-bold text-white">Backend & APIs</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Node.js</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">NestJS</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Express.js</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Microservices</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">REST / GraphQL</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">WebSockets</span>
+            </div>
+          </article>
+
+          <!-- Category: Database & Storage -->
+          <article class="glass p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2 rounded-xl bg-amber-500/10 text-amber-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+              </span>
+              <h3 class="font-heading text-base font-bold text-white">Storage & DBs</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">PostgreSQL</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">MySQL</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">MongoDB</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">CosmosDB</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Redis</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Amazon S3</span>
+            </div>
+          </article>
+
+          <!-- Category: DevOps & Infrastructure -->
+          <article class="glass p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="p-2 rounded-xl bg-rose-500/10 text-rose-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              </span>
+              <h3 class="font-heading text-base font-bold text-white">DevOps & Cloud</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Docker</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Kubernetes</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Terraform</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">GitHub Actions CI/CD</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Microsoft Azure</span>
+              <span class="px-3 py-1.5 text-xs font-medium bg-[#1e293b]/30 rounded-lg text-slate-200 border border-white/5">Google Cloud (GCP)</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          <div class="md:col-span-1">
+            <h2 class="font-heading text-3xl font-bold text-white mb-4 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-400"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+              Education
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full"></div>
+          </div>
+          <div class="md:col-span-2">
+            <div class="glass p-6 md:p-8 rounded-2xl border border-white/5">
+              <h3 class="font-heading text-lg font-bold text-white mb-2">
+                Bachelor of Science in Information Technology
+              </h3>
+              <p class="text-sm font-medium text-indigo-400 mb-4">
+                Mount Kenya University <span class="text-slate-500">•</span> Thika, Kenya
+              </p>
+              <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-white/5">
+                <span class="font-semibold bg-white/5 px-2.5 py-1 rounded">2012 - 2016</span>
+                <span class="italic text-slate-500">Research & Innovation Students Association</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5 text-center">
+        <div class="glass max-w-2xl mx-auto p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
+          <!-- Background glows inside card -->
+          <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-indigo-500/10 blur-2xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-cyan-500/10 blur-2xl pointer-events-none"></div>
+          
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Let's Keep in Touch!</h2>
+          <p class="text-slate-400 mb-8 max-w-md mx-auto">
+            I'm always open to discussing new opportunities, open-source projects, or technical collaborations. Drop me a line!
+          </p>
+          
+          <!-- Call Contacts CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a href="https://www.linkedin.com/in/james-kinyua-njuguna/" target="_blank" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.4)] flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+          
+          <!-- GitHub Connection Link -->
+          <div class="flex items-center justify-center gap-2 text-slate-400 text-sm">
+            <span>Or explore my work on</span>
+            <a href="https://github.com/JayKay24" target="_blank" class="text-white hover:text-indigo-400 transition-colors flex items-center gap-1.5 font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Small Footer -->
+      <footer class="py-8 text-center relative z-10 border-t border-white/5">
+        <p class="text-xs text-slate-500 mb-1">
+          &copy; 2026 James Kinyua Njuguna. All rights reserved.
+        </p>
+        <p class="text-[10px] text-slate-600">
+          Built with HTML5, Tailwind CSS, & Web Standards.
+        </p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script>
+    // Enable JS indicator for CSS transitions
+    document.body.classList.add('js-enabled');
+
+    // Project Grid Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        // Toggle active button styles
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-indigo-600', 'text-white');
+          btn.classList.add('text-slate-400', 'hover:text-white', 'bg-transparent');
+        });
+        button.classList.add('bg-indigo-600', 'text-white');
+        button.classList.remove('text-slate-400', 'hover:text-white', 'bg-transparent');
+
+        // Filter cards with animations
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          
+          if (filter === 'all' || category === filter) {
+            // Unhide item
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            // Hide item
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.96)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Scroll Reveal Intersection Observer Fallback
+    if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+      const revealOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-active');
+            observer.unobserve(entry.target); // trigger animation only once
+          }
+        });
+      }, revealOptions);
+
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        revealObserver.observe(el);
+      });
+    }
+  </script>
 </body>
 
 </html>
