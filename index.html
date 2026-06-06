@@ -45,19 +45,46 @@
 
     <!-- Floating Navigation Bar -->
     <header class="fixed top-4 left-0 w-full z-50 px-4">
-      <nav id="main-nav" class="max-w-4xl mx-auto glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
-        <a href="#hero" class="font-heading font-extrabold text-xl tracking-tight text-white hover:text-indigo-400 transition-colors">
-          JK<span class="text-indigo-500">.</span>
-        </a>
-        <div class="hidden md:flex items-center gap-6">
-          <a href="#about" id="nav-about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
-          <a href="#projects" id="nav-projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
-          <a href="#skills" id="nav-skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a>
-          <a href="#education" id="nav-education" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Education</a>
+      <nav id="main-nav" class="max-w-4xl mx-auto glass-nav rounded-full px-6 py-3 transition-all duration-300 shadow-2xl">
+        <div class="flex items-center justify-between">
+          <a href="#hero" class="font-heading font-extrabold text-xl tracking-tight text-white hover:text-indigo-400 transition-colors">
+            JK<span class="text-indigo-500">.</span>
+          </a>
+          
+          <!-- Desktop Nav Links -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#about" id="nav-about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+            <a href="#projects" id="nav-projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
+            <a href="#skills" id="nav-skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Skills</a>
+            <a href="#education" id="nav-education" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Education</a>
+          </div>
+          
+          <!-- Desktop CTA & Hamburger Button -->
+          <div class="flex items-center gap-3">
+            <a href="#contact" id="nav-cta" class="hidden sm:inline-block bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+              Contact Me
+            </a>
+            
+            <!-- Hamburger Toggle Button (Mobile Only) -->
+            <button id="menu-toggle" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+              <!-- Hamburger Icon (Menu) -->
+              <svg id="menu-icon-hamburger" class="w-6 h-6 transition-all" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <!-- Close Icon (X) -->
+              <svg id="menu-icon-close" class="w-6 h-6 hidden transition-all" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
         </div>
-        <a href="#contact" id="nav-cta" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
-          Contact Me
-        </a>
+        
+        <!-- Mobile Links Container (Collapsible) -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 mt-4 pt-4 border-t border-white/5 pb-2">
+          <a href="#about" class="mobile-nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors py-1">About</a>
+          <a href="#projects" class="mobile-nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors py-1">Projects</a>
+          <a href="#skills" class="mobile-nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors py-1">Skills</a>
+          <a href="#education" class="mobile-nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors py-1">Education</a>
+          <a href="#contact" class="mobile-nav-link bg-indigo-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all duration-300 text-center mt-2 shadow-md">
+            Contact Me
+          </a>
+        </div>
       </nav>
     </header>
 
@@ -759,6 +786,49 @@
             }, 300);
           }
         });
+      });
+    });
+
+    // Mobile Menu Toggle Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('menu-icon-hamburger');
+    const closeIcon = document.getElementById('menu-icon-close');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    const mainNav = document.getElementById('main-nav');
+
+    function toggleMenu() {
+      const isExpanded = mobileMenu.classList.contains('flex');
+      if (isExpanded) {
+        mobileMenu.classList.remove('flex');
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        mainNav.classList.remove('rounded-[2rem]');
+        mainNav.classList.add('rounded-full');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        mainNav.classList.remove('rounded-full');
+        mainNav.classList.add('rounded-[2rem]');
+      }
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', toggleMenu);
+    }
+
+    // Close menu when clicking a link
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('flex');
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        mainNav.classList.remove('rounded-[2rem]');
+        mainNav.classList.add('rounded-full');
       });
     });
   </script>
