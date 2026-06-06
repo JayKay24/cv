@@ -74,9 +74,6 @@
           <!-- Profile image, cropped to circle on browser side -->
           <img src="images/profile.jpeg" alt="James Kinyua Profile Picture" class="relative w-full h-full rounded-full object-cover border-2 border-[#060814] shadow-2xl z-10" />
         </div>
-        <span class="text-xs md:text-sm font-semibold tracking-wider text-indigo-400 uppercase mb-4 px-3 py-1 bg-indigo-500/10 rounded-full border border-indigo-500/20">
-          Available for Opportunities
-        </span>
         <h1 class="font-heading text-5xl md:text-8xl font-black text-white leading-tight tracking-tight mb-6">
           James Kinyua
         </h1>
@@ -940,26 +937,24 @@
       });
     });
 
-    // Scroll Reveal Intersection Observer Fallback
-    if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
-      const revealOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
+    // Scroll Reveal Intersection Observer
+    const revealOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-active');
-            observer.unobserve(entry.target); // trigger animation only once
-          }
-        });
-      }, revealOptions);
-
-      document.querySelectorAll('.scroll-reveal').forEach(el => {
-        revealObserver.observe(el);
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          observer.unobserve(entry.target); // trigger animation only once
+        }
       });
-    }
+    }, revealOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
   </script>
 </body>
 
