@@ -106,7 +106,7 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+      <section id="about" class="py-20 scroll-mt-24 border-t border-white/5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           <div class="md:col-span-1">
             <h2 class="font-heading text-3xl font-bold text-white mb-4 flex items-center gap-3">
@@ -130,7 +130,7 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+      <section id="projects" class="py-20 scroll-mt-24 border-t border-white/5">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <h2 class="font-heading text-3xl font-bold text-white mb-3 flex items-center gap-3">
@@ -415,7 +415,7 @@
 
 
       <!-- Skills Section -->
-      <section id="skills" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+      <section id="skills" class="py-20 scroll-mt-24 border-t border-white/5">
         <div class="mb-12">
           <h2 class="font-heading text-3xl font-bold text-white mb-3 flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-400"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
@@ -648,7 +648,7 @@
       </section>
 
       <!-- Education Section -->
-      <section id="education" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5">
+      <section id="education" class="py-20 scroll-mt-24 border-t border-white/5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           <div class="md:col-span-1">
             <h2 class="font-heading text-3xl font-bold text-white mb-4 flex items-center gap-3">
@@ -675,7 +675,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-20 scroll-mt-24 scroll-reveal border-t border-white/5 text-center">
+      <section id="contact" class="py-20 scroll-mt-24 border-t border-white/5 text-center">
         <div class="glass max-w-2xl mx-auto p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
           <!-- Background glows inside card -->
           <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-indigo-500/10 blur-2xl pointer-events-none"></div>
@@ -757,25 +757,6 @@
           }
         });
       });
-    });
-
-    // Scroll Reveal Intersection Observer
-    const revealOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-active');
-          observer.unobserve(entry.target); // trigger animation only once
-        }
-      });
-    }, revealOptions);
-
-    document.querySelectorAll('.scroll-reveal').forEach(el => {
-      revealObserver.observe(el);
     });
   </script>
 </body>
