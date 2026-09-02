@@ -38,10 +38,11 @@
 <body class="bg-[#060814] text-slate-100 antialiased font-sans selection:bg-indigo-500/30 selection:text-white">
   
   <!-- Background Glowing Blobs -->
-  <div class="relative w-full min-h-screen overflow-x-hidden">
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
     <div class="glow-spot bg-indigo-600/20 top-[-10%] left-[-10%]"></div>
     <div class="glow-spot bg-purple-600/15 top-[35%] right-[-10%]"></div>
     <div class="glow-spot bg-cyan-600/10 bottom-[-5%] left-[20%]"></div>
+  </div>
 
     <!-- Floating Navigation Bar -->
     <header class="fixed top-4 left-0 w-full z-50 px-4">
@@ -801,12 +802,34 @@
       </footer>
 
     </main>
-  </div>
 
   <!-- JavaScript logic -->
   <script>
     // Enable JS indicator for CSS transitions
     document.body.classList.add('js-enabled');
+
+    // Smooth navigation scrolling for anchor links without locking manual scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          
+          // Calculate offset accounting for floating header height
+          const headerOffset = 90;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
     // Project Grid Filtering
     const filterButtons = document.querySelectorAll('.filter-btn');

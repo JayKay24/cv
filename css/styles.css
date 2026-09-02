@@ -3,8 +3,8 @@
 
 /* Reset and Global Base Styles */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* offset for sticky navbar */
+  /* Native scroll padding for clean anchor offset */
+  scroll-padding-top: 90px;
 }
 
 body {
